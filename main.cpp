@@ -64,8 +64,6 @@ int main() {
 	int size = 0, s = 0, * vis;
 	srand(time(NULL));
 	setlocale(LC_ALL, "Rus");
-	printf("¬ведите начальную вершину: ");
-	scanf("%d", &s);
 	printf("¬ведите размер массива: ");
 	scanf("%d", &size);
 
@@ -73,6 +71,8 @@ int main() {
 	for (int i = 0; i < size; i++) vis[i] = 0;
 	G = createG(size);
 	printG(G, size);
+	printf("¬ведите начальную вершину: ");
+	scanf("%d", &s);
 	BFS(G, size, vis, s);
 
 	return 0;
